@@ -1,3 +1,4 @@
+import hashlib
 import random
 import rahasia
 
@@ -10,6 +11,21 @@ kalimat = "nxh pvagn xnzh >//<"
 
 if key == rahasia.KB:
     print("Kamu telah menemukan deskripsi nya!")
+
+def encrypt_string_to_md5(string):
+    # Konversi string ke byte sebelum melakukan enkripsi MD5
+    byte_string = string.encode('utf-8')
+
+    # Buat objek hash MD5
+    hash_object = hashlib.md5()
+
+    # Perbarui objek hash dengan byte string
+    hash_object.update(byte_string)
+
+    # Ambil nilai hex dari hash
+    encrypted_string = hash_object.hexdigest()
+    
+    return encrypted_string
 
 def enkripsi(kalimat, key):
     hasil_enkripsi = ""
@@ -38,10 +54,10 @@ def dekripsi(kalimat, key):
 if key == 13:
     kalimat_hasilenkripsi = enkripsi(kalimat, key)
     kalimat_hasildekripsi = dekripsi(kalimat_hasilenkripsi, key)
-
+    encrypt_string = encrypt_string_to_md5(kalimat_hasilenkripsi)
     print("\nHasil enkripsi:", kalimat_hasilenkripsi)
     print("Masukkan berapa langkah:", key)
-    print(f"Hasil dekripsi dari ({kalimat_hasildekripsi}) adalah ({kalimat_hasilenkripsi})")
+    print(f"Hasil dekripsi md5 dari ({kalimat_hasildekripsi}) adalah ({encrypt_string})")
 
     print("\n" + "="*40 + "\n")
 

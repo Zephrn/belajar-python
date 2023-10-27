@@ -9,4 +9,5 @@ for item in my_list:
     extended_list.append(item)
 
 # Menampilkan list yang telah diperpanjang
-print(extended_list)
+print("Original List: ",my_list)
+print("memasukkan huruf 'a' di antara setiap isi list: ",extended_list)
