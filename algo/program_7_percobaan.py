@@ -157,3 +157,76 @@ print('Nilai maksimum dari list Bahasa Pemrograman : ',max(bhs_pemrograman))
 print('Nilai minimum dari list Bahasa Pemrograman : ',min(bhs_pemrograman))
 print(list(bhs_pemrograman))
 print(bhs_pemrograman.count('Java')) 
+
+# pratikum 7.12
+# Menggunakan methods built-in pada List python
+bhs_pemrograman = ["Pascal", "Java", "Python", "HTML", "PHP", "SQL"]
+
+# 7.12.1 Menggunakan method append
+bhs_pemrograman.append("Laravel")
+print(bhs_pemrograman)
+
+# 7.12.2 Menggunakan method count
+print(bhs_pemrograman.count("Python"))
+
+# 7.12.3 Menggunakan method extend
+bhs_pemrograman.extend(["C#", "JS", "C++"])
+print(bhs_pemrograman)
+
+# 7.12.4 Menggunakan method index
+print(bhs_pemrograman.index("SQL"))
+
+# 7.12.5 Menggunakan method insert
+bhs_pemrograman.insert(1, "C++")
+print(bhs_pemrograman)
+
+# 7.12.6 Menggunakan method pop pada List
+bhs_pemrograman.pop()
+print(bhs_pemrograman)
+
+# 7.12.7 Menggunakan method remove
+bhs_pemrograman.remove("Python")
+print(bhs_pemrograman)
+
+# 7.12.8 Menggunakan method reverse
+bhs_pemrograman.reverse()
+print(bhs_pemrograman)
+
+# 7.12.9 Menggunakan method sort
+bhs_pemrograman.sort()
+print(bhs_pemrograman)
+
+# Percobaan 7.13
+# Contoh program untuk menentukan bilangan genap dan ganjil dalam sebuah list
+
+baris_angka = [-1, 3, 17, 14, 11, 6, 18, 93, 88, 208, 16, 17]
+
+print("Baris Angka:", baris_angka)
+
+bil_genap = [genap for genap in baris_angka if genap % 2 == 0]
+
+print("Bilangan Genap ada", len(bil_genap), "angka, yaitu", bil_genap)
+
+bil_ganjil = [ganjil for ganjil in baris_angka if ganjil % 2 != 0]
+
+print("Bilangan Ganjil ada", len(bil_ganjil), "angka, yaitu", bil_ganjil)
+
+# Percobaan 7.14
+# Menggunakan fungsi join untuk menggabungkan elemen-elemen list
+
+nama_prodi = ['Teknik', 'Informatika', 'Manajemen', 'Informatika', 'Teknik', 'Elektro', 'Sistem', 'Komputer']
+
+program_studi = ' '.join(nama_prodi)
+print("Program Studi D3:", program_studi)
+
+kampus = ["Tepat", 'Hak', "Tepat", "Ukuran", "Tepat", "Aturan"]
+motto = ' '.join(kampus)
+print("Motto Polnep:", motto)
+
+TTL = ['Pontianak', "/", "11", "November", "2003"]
+tempat_tanggal_lahir = ' / '.join(TTL)
+print("Tempat / Tanggal Lahir:", tempat_tanggal_lahir)
+
+nama = ['Awang', 'Praja', 'Anugerah']
+nama_mhs = ' '.join(nama)
+print("Nama Mahasiswa:", nama_mhs)
