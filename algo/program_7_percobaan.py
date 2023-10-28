@@ -229,8 +229,6 @@ print("Tempat / Tanggal Lahir:", tempat_tanggal_lahir)
 
 nama = ['Awang', 'Praja', 'Anugerah']
 nama_mhs = ' '.join(nama)
-<<<<<<< HEAD
 print("Nama Mahasiswa:", nama_mhs)
-=======
-print("Nama Mahasiswa:", nama_mhs)
->>>>>>> c0302c558b8e44aa025a645cea4d79f365448b24
+
+
