@@ -12,4 +12,5 @@ kata = original_string.split()
 filter = [kata for kata in kata if len(''.join(filter(lambda x: x not in string.punctuation, kata))) > filter_kata]
 filter_string = ' '.join(filter)
 print("ini merupakan kata yang sudah di filter lebih dari 5 kata: \n", filter_string.split())
+print(f"\nterdapar {len(filter)} kata yang terfilter lebih dari 5")
 
