@@ -33,23 +33,23 @@ cv2.destroyAllWindows()
 data_wajah = np.asarray(data_wajah)
 data_wajah = data_wajah.reshape(100, -1)
 
-if 'names.pkl' not in os.listdir('face ai project/data'):
+if 'names.pkl2' not in os.listdir('face ai project/data'):
     names = [name] * 100
-    with open('face ai project/data/nama.pkl', 'wb') as f:
+    with open('face ai project/data/nama.pkl2', 'wb') as f:
         pickle.dump(names, f)
 else:
-    with open('face ai project/data/nama.pkl', 'rb') as f:
+    with open('face ai project/data/nama.pkl2', 'rb') as f:
         names = pickle.load(f)
     names = names + [names] * 100
-    with open('face ai project/data/nama.pkl', 'wb') as f:
+    with open('face ai project/data/nama.pkl2', 'wb') as f:
         pickle.dump(names, f)
 
-if 'wajah_names.pkl' not in os.listdir('face ai project/data'):
-    with open('face ai project/data/wajah_nama.pkl', 'wb') as f:
+if 'wajah_names.pkl2' not in os.listdir('face ai project/data'):
+    with open('face ai project/data/wajah_nama.pkl2', 'wb') as f:
         pickle.dump(data_wajah, f)
 else:
-    with open('face ai project/data/wajah_nama.pkl', 'rb') as f:
+    with open('face ai project/data/wajah_nama.pkl2', 'rb') as f:
         muka = pickle.load(f)
     muka = np.append(muka, data_wajah, axis=0)
-    with open('face ai project/data/wajah_nama.pkl', 'wb') as f:
+    with open('face ai project/data/wajah_nama.pkl2', 'wb') as f:
         pickle.dump(muka, f)

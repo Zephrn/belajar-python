@@ -6,7 +6,7 @@ mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
 # Buka kamera
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 
 # Membaca kamera dan mendeteksi wajah
 with mp_face_detection.FaceDetection(

@@ -8,7 +8,9 @@ print("\n")
 # fungsi memfilter kata 
 
 kata = original_string.split()
-filter = [kata for kata in kata if len(kata) > filter_kata]
-filter_string = ' '.join(filter)
-print("ini merupakan kata yang sudah di filter lebih dari 5 kata: \n", filter_string.split())
-print(f"\nterdapar {len(filter)} kata yang terfilter lebih dari 5")
+print(kata)
+# filter = [kata for kata in kata if len(kata) > filter_kata]
+# filter_k = [kata for kata in kata if len(kata) < filter_kata]
+# filter_string = ' '.join(filter)
+# print("ini merupakan kata yang sudah di filter lebih dari 5 kata: \n", filter_string.split())
+# print(f"\nterdapat {len(filter)} kata yang terfilter lebih dari 5")
