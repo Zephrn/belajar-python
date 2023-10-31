@@ -39,12 +39,13 @@ for i, data in enumerate(union_1a, 1):
     print({data}, end="\n" if i % 5 == 0 else " ")
 
 # Program 1b
-print("\n\n", "=" * 20, "PROGRAM 1B", "=" * 20)
+print("\n\nPROGRAM 1B : ")
+print("=" * 53)
 print("hasil analisin program union : ")
 irisan_1a = set_a.intersection(set_b, set_c, set_d, set_e)
 print(f"kata yang sama \t\t: {irisan_1a}\njumlah kata union \t: {len(union_1a)} \nselisih union dan list \t: {jumlah_1a}")
 print("=" * 53, "\n")
-print("*" * 100, "\n")
+print("+" * 100, "\n")
 
 # Program 2.a
 irisan_2a = set_a.intersection(set_b)
@@ -56,17 +57,26 @@ print(pj)
 print("=" * pja * 2, "\n")
 
 # Program 2.b
-print("=" * 20, "program 2b", "=" * 20)
+print("PROGRAM 2 B : ")
 irisan_2b = set_c.intersection(set_d).union(set_c.intersection(set_e))
 irisan_2b_b = set_c.intersection(set_d, set_e)
-print(f"diantara 3 kelas ada beberapa nama yang masuk irisan or yaitu : \n {irisan_2b}")
-print(f"diantara 3 kelas ada beberapa nama yang masuk irisan and yaitu : \n {irisan_2b_b} \n")
-
+irisan_k_2B = f"diantara 3 kelas ada beberapa nama yang masuk irisan or yaitu : \n {irisan_2b}"
+irisan_k_2BB = f"diantara 3 kelas ada beberapa nama yang masuk irisan and yaitu : \n {irisan_2b_b}"
+ik2b = len(irisan_k_2B) // 2
+print("="*ik2b)
+print(irisan_k_2B)
+print("")
+print(irisan_k_2BB)
+print("="*ik2b)
+print("")
 # Program 2.c
-print("=" * 20, "program 2c", "=" * 20)
+print("PROGRAM 2 C")
 irisan_2c = set_a.intersection(set_b, set_c, set_d, set_e)
-print(f"diantara 5 kelas ada beberapa nama yang masuk irisan yaitu : {irisan_2c} \n")
-print("*" * 100, "\n")
+print("="*ik2b)
+print(f"diantara 5 kelas ada beberapa nama yang masuk irisan yaitu : {irisan_2c}")
+print("="*ik2b)
+print("")
+print("+" * 100, "\n")
 
 # Program 3 fungsi difference
 # prog 3a
@@ -91,7 +101,7 @@ for i, data in enumerate(difference_3a, 1):
     print({data}, end="\n" if i % 5 == 0 else " ")
 
 # Mencetak program B
-print("PROGRAM 3 B : \n")
+print("\n\nPROGRAM 3 B : \n")
 print("gabungan dari kelas C dan D : \n")
 for i, data in enumerate(union_3b, 1):
     print({data}, end="\n" if i % 5 == 0 else " ")
@@ -100,14 +110,15 @@ for i, data in enumerate(difference_3b, 1):
     print({data}, end="\n" if i % 5 == 0 else " ")
 
 # Mencetak program C
-print("PROGRAM 3 C : \n")
+print("\n\nPROGRAM 3 C : \n")
 print("gabungan dari kelas E dan A : \n")
 for i, data in enumerate(union_3c, 1):
     print({data}, end="\n" if i % 5 == 0 else " ")
 print("\n\ndifference dari kelas E dan A : \n")
 for i, data in enumerate(difference_3c, 1):
     print({data}, end="\n" if i % 5 == 0 else " ")
-
+print("\n")
+print("+" * 100, "\n")
 # Program 4 A
 s_dif_a = set_a.symmetric_difference(set_b)
 spa = len(s_dif_a)
@@ -117,7 +128,7 @@ s_dif_c = set_a.symmetric_difference(set_b).symmetric_difference(set_c).symmetri
 spc = len(s_dif_c)
 
 # Mencetak program A
-print("\nPROGRAM 4 A : \n")
+print("\n\nPROGRAM 4 A : \n")
 print("symmentric different dari kelas A dan B : \n")
 for i, data in enumerate(s_dif_a, 1):
     print({data}, end="\n" if i % 5 == 0 else " ")
