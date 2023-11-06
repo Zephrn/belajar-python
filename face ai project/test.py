@@ -6,9 +6,9 @@ import os
 video = cv2.VideoCapture(1)
 deteksi_wajah=cv2.CascadeClassifier('face ai project/data/wajah.xml')
 
-with open('face ai project/data/nama.pkl', 'rb') as f:
+with open('face ai project/data/nama.pkl2', 'rb') as f:
         LABELS=pickle.load(f)
-with open('face ai project/data/wajah_nama.pkl', 'rb') as f:
+with open('face ai project/data/wajah_nama.pkl2', 'rb') as f:
         MUKA=pickle.load(f)
 
 
