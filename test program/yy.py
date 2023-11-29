@@ -1,74 +1,86 @@
+import streamlit as st
 import datetime
 
+# Panjang teks
 panjang = 45
 
-print("Login Casher CwCoffe".center(panjang), "\n") 
-while True:
-    try:
-        keys = "admin"
-        login = str(input("masukan id \t: "))
-        pw = str(input("masukan pw \t: "))
-        if login == keys and pw == keys:
-            print("\n","anda berhasil login".center(panjang))
-            break
-        else:
-            print("\n","password salah".center(panjang))
-    except ValueError:
-        print("password salah".center(panjang))
-print("\n")
-print("Selamat Datang Di".center(panjang))
-print(" CwCoffe & Eatery".center(panjang))
-print("\n","MENU".center(panjang),"\n")
+# Login
+def login():
+    keys = "admin"
+    login = st.text_input("masukan id \t: ")
+    pw = st.text_input("masukan pw \t: ")
+    if login == keys and pw == keys:
+        st.write("\n", "anda berhasil login".center(panjang))
+        return True
+    else:
+        st.write("\n", "password salah".center(panjang))
+        return False
 
 # Daftar menu dan harganya
-print("Minuman : ")
 minuman = {
-    "Robusta Coffe Milk": 17000,
-    "Black Sasame Coffe": 23000,
-    "Cappicino Cincau": 28000,
-    "Arabica Coffe Milk": 20000,
-    "Coffe Latte \t": 22000,
-    "Americano Arabica": 14000
+    1: {"name": "Robusta Coffe Milk", "price": 17000},
+    2: {"name": "Black Sasame Coffe", "price": 23000},
+    3: {"name": "Cappicino Cincau", "price": 28000},
+    4: {"name": "Arabica Coffe Milk", "price": 20000},
+    5: {"name": "Coffe Latte", "price": 22000},
+    6: {"name": "Americano Arabica", "price": 14000}
 }
-for item, price in minuman.items():
-    print(f"{item} \t: Rp{price}")
 
-print("\nMakanan : ")
 makanan = {
-    "Beef Bulgogi": 35000,
-    "Chicken Steak": 30000,
-    "Chicken Katsu": 26000,
-    "Nasi Goreng": 35000,
-    "Mie Goreng ": 35000,
-    "Bakso Goreng": 35000
+    1: {"name": "Beef Bulgogi", "price": 35000},
+    2: {"name": "Chicken Steak", "price": 30000},
+    3: {"name": "Chicken Katsu", "price": 26000},
+    4: {"name": "Nasi Goreng", "price": 35000},
+    5: {"name": "Mie Goreng", "price": 35000},
+    6: {"name": "Bakso Goreng", "price": 35000}
 }
 
-for item, price in makanan.items():
-    print(f"{item} \t: Rp{price}")
+# Cetak daftar menu
+def cetak_menu():
+    st.write("Minuman : ")
+    for item in minuman.values():
+        st.write(f"{item['name']} \t: Rp{item['price']}")
 
-nama = str(input("nama pelanggan : "))
-meja = int(input("nomor meja : "))
+    st.write("\nMakanan : ")
+    for item in makanan.values():
+        st.write(f"{item['name']} \t\t: Rp{item['price']}")
 
-total = 0
-pesanan = {}
+# Input nama pelanggan dan nomor meja
+def input_pelanggan():
+    global nama
+    nama = st.text_input("nama pelanggan : ")
 
-while True:
-    pilihan = input("Masukkan nama makanan atau ketik 'selesai' untuk mengakhiri: ")
-    if pilihan.lower() == 'selesai':
-        break
-    elif pilihan in makanan:
-        if pilihan in pesanan:
-            pesanan[pilihan] += 1
+    global meja
+    meja = st.text_input("nomor meja : ")
+
+# Pilih menu
+def pilih_menu():
+    global pesanan
+    pilihan = st.text_input("isi menu. 'x' untuk end: ")
+    if pilihan.lower() == 'x':
+        return
+    elif pilihan in [item['name'] for item in makanan.values()] or pilihan in [item['name'] for item in minuman.values()]:
+        jenis = ''
+        if pilihan in [item['name'] for item in makanan.values()]:
+            jenis = 'makanan'
+        elif pilihan in [item['name'] for item in minuman.values()]:
+            jenis = 'minuman'
+        jumlah = int(st.text_input(f"Masukkan jumlah {pilihan} {jenis} yang dipesan: "))
+        if jenis == 'makanan':
+            for item in makanan.values():
+                if item['name'] == pilihan:
+                    if pilihan in pesanan:
+                        pesanan[pilihan] += jumlah
+                    else:
+                        pesanan[pilihan] = jumlah
+                    st.write(f"{pilihan} ditambahkan ke daftar pesanan.")
+        elif jenis == 'minuman':
+            for item in minuman.values():
+                if item['name'] == pilihan:
+                    if pilihan in pesanan:
+                        pesanan[pilihan] += jumlah
+                    else:
+                        pesanan[pilihan] = jumlah
+                    st.write(f"{pilihan} ditambahkan ke daftar pesanan.")
         else:
-            pesanan[pilihan] = 1
-        total += makanan[pilihan]
-        print(f"{pilihan} ditambahkan ke daftar pesanan.")
-
-print("\nDaftar Pesanan:")
-for item, quantity in pesanan.items():
-    print(f"{item:15} : {quantity}")
-
-print(f"\nTotal harga yang harus dibayar: Rp{total}")
-
-tanggal_sekarang = datetime.datetime.now()
-print(f"Waktu Pembayaran: {tanggal_sekarang}")
+            st.write("Menu tidak valid. Silakan pilih menu yang tersedia")

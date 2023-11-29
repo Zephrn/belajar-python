@@ -25,8 +25,8 @@ tampung8 = bio["Alamat_email"]
 tampung9 = bio["Hobi"]
 tampung10 = bio["Cita_Cita"]
 
-for i, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10 in zip(tampung, tampung1, tampung2, tampung3, tampung4, tampung5, tampung6, tampung7, tampung8, tampung9, tampung10):
-    print(f" Nama\t\t: {tampung[i]}\n Panggilan\t: {tampung1[i1]}\n tempat_lahir\t: {tampung2[i2]}\n tanggal_lahir\t: {tampung3[i3]}\n jenis_kelamin\t: {tampung4[i4]}\n Agama\t\t: {tampung5[i5]}\n Alamat_rumah\t: {tampung6[i6]}\n Nomor_Telepon\t: {tampung7[i7]}\n Alamat_email\t: {tampung8[i8]}\n Hobi\t\t: {tampung9[i9]}\n Cita_Cita\t: {tampung10[i10]}\n {"="*40}")
+for kunci, kunci1, kunci2, kunci3, kunci4, kunci5, kunci6, kunci7, kunci8, kunci9, kunci10 in zip(tampung, tampung1, tampung2, tampung3, tampung4, tampung5, tampung6, tampung7, tampung8, tampung9, tampung10):
+    print(f" Nama\t\t: {tampung[kunci]}\n Panggilan\t: {tampung1[kunci1]}\n tempat_lahir\t: {tampung2[kunci2]}\n tanggal_lahir\t: {tampung3[kunci3]}\n jenis_kelamin\t: {tampung4[kunci4]}\n Agama\t\t: {tampung5[kunci5]}\n Alamat_rumah\t: {tampung6[kunci6]}\n Nomor_Telepon\t: {tampung7[kunci7]}\n Alamat_email\t: {tampung8[kunci8]}\n Hobi\t\t: {tampung9[kunci9]}\n Cita_Cita\t: {tampung10[kunci10]}\n {'='*40}")
 
 
 
